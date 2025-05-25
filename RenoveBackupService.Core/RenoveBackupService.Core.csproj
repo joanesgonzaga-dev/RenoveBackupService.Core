@@ -1,0 +1,41 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>dotnet-RenoveBackupService.Core-a9657c86-2b9b-4c9a-9d80-5ff8012f8ae3</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    
+    
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="6.0.1" />
+	<PackageReference Include="Microsoft.Extensions.Hosting.WindowsServices" Version="6.0.1" />
+    
+	  <PackageReference Include="Quartz" Version="3.3.3" />
+	  <PackageReference Include="Quartz.Extensions.DependencyInjection" Version="3.3.3" />
+	  <PackageReference Include="Quartz.Extensions.Hosting" Version="3.3.3" />
+	  <PackageReference Include="Serilog" Version="4.2.0" />
+	  <PackageReference Include="Serilog.Extensions.Hosting" Version="9.0.0" />
+	  <PackageReference Include="Serilog.Sinks.File" Version="6.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="bin\Debug\net6.0\mysql\libmariadb.dll" />
+    <None Include="bin\Debug\net6.0\mysql\libmariadb.lib" />
+    <None Include="bin\Debug\net6.0\mysql\libmariadb.pdb" />
+    <None Include="bin\Debug\net6.0\mysql\mariadbclient.lib" />
+    <None Include="bin\Debug\net6.0\mysql\mysql.exe" />
+    <None Include="bin\Debug\net6.0\mysql\mysqldump.exe" />
+    <None Include="bin\Debug\net6.0\mysql\mysqlservices.lib" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ServicosGlobais\ServicosGlobais.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Models\" />
+  </ItemGroup>
+</Project>
